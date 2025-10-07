@@ -1143,7 +1143,7 @@ body {
 .promo-banner-money {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 25px;
-    min-height: 130px;
+    min-height: 150px;
 }
 
 .promo-banner-bonus {
