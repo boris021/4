@@ -1064,3 +1064,209 @@ body {
 .nav-iconsas img {
     display: none;
 }
+
+/* Промо баннеры */
+.promo-banners {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+    padding: 0 30px;
+}
+
+.promo-banner {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 40px;
+    min-height: 280px;
+        flex-direction: column;
+}
+
+/* Главный баннер */
+.promo-banner-main {
+    background: url(img/tS3XLFv_nX7sNaM4SER_5XojrYPMmLkIRpRS6SdpcAFZ_Jln3eCA29Df8dlIRmHZGpKHpo_G5sMzhfrEhFFRK0DHq7dt4G0IM12o.avif) no-repeat center/cover;
+}
+
+.promo-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.btn-promo {
+    display: inline-block;
+    padding: 14px 40px;
+    background: #ffffff;
+    color: #1a1a2e;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-promo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 255, 255, 0.2);
+}
+
+.promo-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promo-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Боковые баннеры */
+.promo-banners-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.promo-banner-money {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 25px;
+    min-height: 130px;
+}
+
+.promo-banner-bonus {
+    background: linear-gradient(135deg, #7b2cbf 0%, #5a189a 100%);
+    padding: 25px;
+    min-height: 130px;
+}
+
+.promo-badge {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    padding: 6px 16px;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.promo-content-small p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #ffffff;
+    margin: 0;
+}
+
+.bonus-icon {
+    font-size: 16px;
+}
+
+.promo-image-small {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 120px;
+    height: 80px;
+}
+
+.promo-image-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    .promo-banners {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+    }
+
+    .promo-banners-side {
+        flex-direction: row;
+    }
+
+    .promo-banner-money,
+    .promo-banner-bonus {
+        flex: 1;
+    }
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .promo-banners {
+        padding: 0 15px;
+        gap: 15px;
+    }
+
+    .promo-banner {
+        padding: 30px 20px;
+        min-height: 220px;
+    }
+
+    .promo-banner-main {
+        min-height: 250px;
+    }
+
+    .promo-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .btn-promo {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    .promo-image {
+        width: 40%;
+    }
+
+    .promo-banners-side {
+        flex-direction: column;
+    }
+
+    .promo-banner-money,
+    .promo-banner-bonus {
+        min-height: 120px;
+        padding: 20px;
+    }
+
+    .promo-image-small {
+        width: 100px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .promo-content h2 {
+        font-size: 20px;
+    }
+
+    .promo-banner {
+        padding: 25px 15px;
+        min-height: 200px;
+    }
+
+    .promo-image {
+        opacity: 0.3;
+    }
+
+    .promo-content-small p {
+        font-size: 13px;
+    }
+}
